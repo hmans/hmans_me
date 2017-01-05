@@ -1,16 +1,16 @@
 PATH
   remote: ~/src/flutterby
   specs:
-    flutterby (0.0.1)
-      commander
-      listen
-      mime-types
-      rack
-      sass
-      slim
-      slodown
-      tilt
-      toml-rb
+    flutterby (0.0.3)
+      commander (~> 4.4)
+      listen (~> 3.1)
+      mime-types (~> 3.1)
+      rack (~> 2.0)
+      sass (~> 3.4)
+      slim (~> 3.0)
+      slodown (~> 0.3)
+      tilt (~> 2.0)
+      toml-rb (~> 0.3)
 
 GEM
   remote: https://rubygems.org/

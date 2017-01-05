@@ -1,5 +1,5 @@
 +++
-title = "Hello World..."
+title = "Hello World!"
 +++
 
-This is the experimental blog of Hendrik Mans!
+Yup, here's another blog!
