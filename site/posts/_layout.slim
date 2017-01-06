@@ -1,7 +1,7 @@
 article.post
   .meta
-    = date_format entity.data["date"], "%B %e, %Y"
+    = date_format page.data["date"], "%B %e, %Y"
 
-  h2 = entity.data["title"]
+  h2 = page.data["title"]
 
-  == entity.filtered_contents
+  == page.filtered_contents
