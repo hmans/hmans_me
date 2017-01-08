@@ -1,7 +1,17 @@
-PATH
-  remote: ~/src/flutterby
+GIT
+  remote: git://github.com/hmans/flutterby-coffeescript.git
+  revision: b0d4d1102f54c7f0ce539ad9c72bdd80f77d054f
+  branch: master
   specs:
-    flutterby (0.0.12)
+    flutterby-coffeescript (0.2.0)
+      coffee-script (~> 2)
+
+GIT
+  remote: git://github.com/hmans/flutterby.git
+  revision: 1b6e8d6997a087f05e2edca0d11457d3b24de091
+  branch: master
+  specs:
+    flutterby (0.0.13)
       commander (~> 4.4)
       listen (~> 3.1)
       mime-types (~> 3.1)
@@ -16,12 +26,17 @@ GEM
   remote: https://rubygems.org/
   specs:
     citrus (3.0.2)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     commander (4.4.3)
       highline (~> 1.7.2)
     crass (1.0.2)
+    execjs (2.7.0)
     ffi (1.9.14)
     highline (1.7.8)
-    kramdown (1.13.1)
+    kramdown (1.13.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -64,6 +79,7 @@ PLATFORMS
 
 DEPENDENCIES
   flutterby!
+  flutterby-coffeescript!
 
 RUBY VERSION
    ruby 2.3.3p222
