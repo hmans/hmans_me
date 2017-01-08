@@ -1,7 +1,3 @@
-module PoopyHeart
-  def poop
-    "#{super} + ❤️"
-  end
+def poop
+  "#{super} + ❤️"
 end
-
-extend PoopyHeart

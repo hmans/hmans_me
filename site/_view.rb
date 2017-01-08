@@ -1,11 +1,7 @@
-module Helpers
-  def poop
-    "💩"
-  end
-
-  def blog_posts
-    find('/posts').pages.sort_by {|p| p.data['date'] }.reverse
-  end
+def poop
+  "💩"
 end
 
-extend Helpers
+def blog_posts
+  find('/posts').pages.sort_by {|p| p.data['date'] }.reverse
+end
