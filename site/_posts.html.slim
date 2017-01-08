@@ -1,4 +1,5 @@
-ul
+ul.post-list
   - blog_posts.each do |post|
     li
-      a href=post.url = post.data["title"] || "Unnamed Post"
+      .post-meta = date_format post.data["date"], "%B %e, %Y"
+      h2: a href=post.url = post.data["title"] || "Unnamed Post"

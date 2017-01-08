@@ -1,7 +1,7 @@
 article.post
-  .meta
+  .post-meta
     = date_format page.data["date"], "%B %e, %Y"
 
-  h2 = page.data["title"]
+  h1 = page.data["title"]
 
   == page.filtered_contents
