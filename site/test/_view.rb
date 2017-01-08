@@ -1,0 +1,3 @@
+def poop
+  "❤️"
+end
