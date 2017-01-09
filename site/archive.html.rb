@@ -1,16 +1,12 @@
 def filter!
+  # Remove this node's extension because we're going to turn it
+  # into a folder, anyway. (It only has an extra HTML extension
+  # because otherwise, the processing wouldn't kick in!)
   self.ext = nil
 
+  # Load all blog posts and group them by year.
   all_posts = find("/posts").pages
-
-  post_groups = all_posts.group_by do |p|
-    # We need to make sure the post's data has been extracted
-    # by now. We shouldn't really have to do this here -- I'll
-    # figure out something smarter when I've had coffee.
-    p.extract_data!
-
-    p.data['date'].year
-  end
+  post_groups = all_posts.group_by { |p| p.data['date'].year }
 
   # For each year, create a new node with an index page.
   post_groups.each do |year, post|

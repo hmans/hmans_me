@@ -8,10 +8,10 @@ GIT
 
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 0a81ede04ae6a1ce328642343dcdc441335c812b
+  revision: e37dc0dffaeb794198387ef364f416bd7fc3780d
   branch: master
   specs:
-    flutterby (0.0.15)
+    flutterby (0.0.16)
       commander (~> 4.4)
       listen (~> 3.1)
       mime-types (~> 3.1)
