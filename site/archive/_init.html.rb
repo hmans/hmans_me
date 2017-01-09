@@ -10,8 +10,7 @@ def filter!
 
   # For each year, create a new node with an index page.
   post_groups.each do |year, post|
-    Flutterby::Node.new "#{year}.html",
-      parent: self,
-      source: "hi from #{year}!"
+    page = sibling("_page").copy(year.to_s)
+    page.data['year'] = year
   end
 end
