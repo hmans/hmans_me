@@ -5,7 +5,7 @@ module PostExtensions
 
   def name_with_date
     date = data['date'] || Date.today
-    "#{date.year}/#{date.month}/#{date.day}/#{slug}"
+    "#{date.year}/#{sprintf "%02d", date.month}/#{sprintf "%02d", date.day}/#{slug}"
   end
 
   def slug
