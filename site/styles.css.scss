@@ -34,6 +34,14 @@ main {
   margin-top: 2em;
 }
 
+footer[role="main"] {
+  color: lightgrey;
+  font-size: 0.825em;
+  a { color: inherit; }
+
+  margin-top: 50px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-size: inherit;
   margin: 2em 0 1em 0;
