@@ -1,14 +1,14 @@
 GIT
   remote: git://github.com/hmans/flutterby-coffeescript.git
-  revision: a49ce49d484775dcce7a049de5c8a0a6fe9b991c
+  revision: 485ff06ab659e1117fa2b5dbeddc0411fcabc0eb
   branch: master
   specs:
-    flutterby-coffeescript (0.2.1)
+    flutterby-coffeescript (0.2.2)
       coffee-script (~> 2)
 
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 75d22277685de28003525a6c0f349a980b800c32
+  revision: 8f3041248612e39bc75e9ae53f25781f1f514aca
   branch: master
   specs:
     flutterby (0.0.17)
