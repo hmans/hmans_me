@@ -8,10 +8,11 @@ GIT
 
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 8f3041248612e39bc75e9ae53f25781f1f514aca
+  revision: 2c5e381f2ee6280961cf414c213efae4a959925e
   branch: master
   specs:
     flutterby (0.0.17)
+      builder (~> 3.2)
       commander (~> 4.4)
       listen (~> 3.1)
       mime-types (~> 3.1)
@@ -25,6 +26,7 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    builder (3.2.2)
     citrus (3.0.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -82,7 +84,7 @@ DEPENDENCIES
   flutterby-coffeescript!
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.6
+   1.13.7
