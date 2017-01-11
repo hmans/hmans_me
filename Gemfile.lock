@@ -8,18 +8,19 @@ GIT
 
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 2c5e381f2ee6280961cf414c213efae4a959925e
+  revision: 9d3c1690beb84886515a1480709b2201cfc2288f
   branch: master
   specs:
-    flutterby (0.0.17)
+    flutterby (0.0.20)
       builder (~> 3.2)
-      commander (~> 4.4)
+      highline (~> 1.7)
       listen (~> 3.1)
       mime-types (~> 3.1)
       rack (~> 2.0)
       sass (~> 3.4)
       slim (~> 3.0)
       slodown (~> 0.3)
+      thor (~> 0.19)
       tilt (~> 2.0)
       toml-rb (~> 0.3)
 
@@ -32,8 +33,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    commander (4.4.3)
-      highline (~> 1.7.2)
     crass (1.0.2)
     execjs (2.7.0)
     ffi (1.9.14)
@@ -72,6 +71,7 @@ GEM
       ruby-oembed (>= 0.9.0)
       sanitize (>= 2.0.0)
     temple (0.7.7)
+    thor (0.19.4)
     tilt (2.0.5)
     toml-rb (0.3.15)
       citrus (~> 3.0, > 3.0)
