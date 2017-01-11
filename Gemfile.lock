@@ -8,12 +8,13 @@ GIT
 
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 2a2502e874275767199943ea4c8ed55865d4cb49
+  revision: f26f358e5c6f799cc5fe945a03d7104894ea2367
   branch: master
   specs:
-    flutterby (0.0.20)
+    flutterby (0.0.25)
       builder (~> 3.2)
       highline (~> 1.7)
+      json (~> 2.0)
       listen (~> 3.1)
       mime-types (~> 3.1)
       rack (~> 2.0)
@@ -37,6 +38,7 @@ GEM
     execjs (2.7.0)
     ffi (1.9.14)
     highline (1.7.8)
+    json (2.0.2)
     kramdown (1.13.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -82,6 +84,8 @@ PLATFORMS
 DEPENDENCIES
   flutterby!
   flutterby-coffeescript!
+  json
+  ruby-oembed
 
 RUBY VERSION
    ruby 2.4.0p0

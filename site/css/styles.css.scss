@@ -67,6 +67,10 @@ code {
   border-radius: 2px;
 }
 
+/* code blocks */
+pre>code {
+  padding: 15px !important;
+}
 
 /* action lists */
 ul.actions {
