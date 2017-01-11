@@ -84,8 +84,6 @@ PLATFORMS
 DEPENDENCIES
   flutterby!
   flutterby-coffeescript!
-  json
-  ruby-oembed
 
 RUBY VERSION
    ruby 2.4.0p0

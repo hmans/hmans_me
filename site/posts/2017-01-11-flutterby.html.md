@@ -99,4 +99,4 @@ If you're still wondering why I ended up building _yet another static site gener
 Stay tuned, and do give [Flutterby] a try -- I'm happy about all feedback!
 
 
-[Flutterby]: https://github.com/hmans/flutterby/
+[Flutterby]: https://github.com/hmans/flutterby
