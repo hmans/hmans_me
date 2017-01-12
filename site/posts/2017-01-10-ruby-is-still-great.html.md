@@ -30,7 +30,7 @@ Elm is a fun (and also functional) language for building client-side web applica
 
 After spending all this time with these exciting technologies and thinking about some glorious (or at least fun) things to build with them, I ended up building a small tool I needed with Ruby -- and realized that I still love it very much. It's not terribly fast, it doesn't really do much for concurrency or parallelism, but it's just _so nice_.
 
-The tool I wrote is a static site generator -- yes, yet another one -- that I'm now using to create and maintain this and some other sites. It performs some funky magic tricks that are really only possible (or at least feasible) to do with an interpreted, loosely-typed, object-oriented language. I think you're going to like it!
+[The tool I wrote is a static site generator](http://hmans.io/posts/2017/01/11/flutterby.html) -- yes, yet another one -- that I'm now using to create and maintain this and some other sites. It performs some funky magic tricks that are really only possible (or at least feasible) to do with an interpreted, loosely-typed, object-oriented language. I think you're going to like it!
 
 So, what are we to take away from this? All programming languages are exciting. Some are faster, others are more flexible. There is no linear scale that makes language X better than language Y; be smart and choose the best tool for the job.
 
