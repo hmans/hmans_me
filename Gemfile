@@ -3,5 +3,5 @@ source "https://rubygems.org"
 
 ruby "2.4.0"
 
+gem "coffee-script"
 gem "flutterby", github: "hmans/flutterby", branch: "master"
-gem "flutterby-coffeescript", github: "hmans/flutterby-coffeescript", branch: "master"

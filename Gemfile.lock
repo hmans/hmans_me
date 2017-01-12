@@ -1,17 +1,9 @@
 GIT
-  remote: git://github.com/hmans/flutterby-coffeescript.git
-  revision: 485ff06ab659e1117fa2b5dbeddc0411fcabc0eb
-  branch: master
-  specs:
-    flutterby-coffeescript (0.2.2)
-      coffee-script (~> 2)
-
-GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: f26f358e5c6f799cc5fe945a03d7104894ea2367
+  revision: a8c1dc61037c9b62f11fa3dd7a44857a81115e48
   branch: master
   specs:
-    flutterby (0.0.25)
+    flutterby (0.2.0)
       builder (~> 3.2)
       highline (~> 1.7)
       json (~> 2.0)
@@ -82,8 +74,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  coffee-script
   flutterby!
-  flutterby-coffeescript!
 
 RUBY VERSION
    ruby 2.4.0p0
