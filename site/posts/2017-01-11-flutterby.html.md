@@ -2,7 +2,7 @@
 title: Introducing Flutterby!
 ---
 
-<blockquote class="twitter-tweet" data-lang="de"><p lang="en" dir="ltr">Hi. If you enjoy Ruby and static site generation, I invite you to:<br><br>gem install flutterby<br>flutterby new mysite<br>cd mysite<br>flutterby serve</p>&mdash; Hendrik Mans 🚂 (@hmans) <a href="https://twitter.com/hmans/status/819227586446376960">11. Januar 2017</a></blockquote>
+<a class="embed" href="https://twitter.com/hmans/status/819227586446376960">11. Januar 2017</a>
 
 So, here's my latest toy: **[Flutterby]**! It's -- at its core -- a static site generator built in Ruby. Yeah, just like Jekyll, minus the fantastic ecosystem that has had many years to mature. Well... :)
 
