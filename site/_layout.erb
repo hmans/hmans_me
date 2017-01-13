@@ -36,17 +36,8 @@
       </main>
 
       <footer role="main">
-        <% if page.fs_path %>
-          <% abs_path = Pathname.new(page.fs_path) %>
-          <% base_path = Pathname.new(File.expand_path(File.dirname(__FILE__))) %>
-          <% rel_path = abs_path.relative_path_from(base_path) %>
-
-          This site is built with <a href="https://github.com/hmans/flutterby">Flutterby</a>.
-          You can check out this page's source code
-          <a href="https://github.com/hmans/hmans_me/blob/master/<%= rel_path %>">here</a>.
-        <% end %>
+        <%= render("/_link_to_source.html", page: page) %>
       </footer>
-
 
       <!-- google analytics -->
       <%= render("/_google_analytics.html") %>
