@@ -2,26 +2,34 @@ extend_siblings do
   def slug
     name.sub(%r{^(\d\d\d\d\-\d\d?\-\d\d?)\-}, "")
   end
+
+  def date
+    data[:date]
+  end
+
+  def title
+    data[:title]
+  end
 end
 
 extend_parent do
   def setup
     move_posts
   end
-  
+
   def posts
     @posts ||= pages
   end
 
   def latest_posts
-    @latest_posts ||= posts.sort_by {|p| p.data['date'] }.reverse
+    @latest_posts ||= posts.sort_by(&:date).reverse
   end
 
   def move_posts
     # Move posts to their correct date URL.
     posts.each do |post|
       # Move it to a node representing the date (eg. 2017/01/11)
-      post.parent = get_date_node(post.data[:date])
+      post.parent = get_date_node(post.date)
 
       # Remove the date from the file name
       post.name   = post.slug
