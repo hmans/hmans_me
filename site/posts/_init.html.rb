@@ -1,53 +1,33 @@
 module PostUrlsWithDays
-  class YearlyNode < Flutterby::Node
-    def emit_child(name)
-      if name =~ %r{\A[0-9]+\Z}
-        MonthlyNode.new(name, parent: self)
-      end
-    end
-  end
-
-  class MonthlyNode < Flutterby::Node
-    def emit_child(name)
-      if name =~ %r{\A[0-9]+\Z}
-        DailyNode.new(name, parent: self)
-      end
-    end
-  end
-
-  class DailyNode < Flutterby::Node
-  end
-
-  def emit_child(name)
-    if name =~ %r{\A[0-9]+\Z}
-      YearlyNode.new(name, parent: self)
-    end
-  end
-
-
-
   def self.extended(base)
     base.move_posts
+    base.build_latest_post_index
   end
 
   def move_posts
-    # Store a reference to all posts for later
+    # Store a reference to all posts so we can still query these
+    # objects later.
     data[:posts] = pages
 
-    # Move posts to their correct date URL
+    # Move posts to their correct date URL.
     data[:posts].each do |post|
-      target_name = post.data[:date].strftime("%Y/%m/%d")
-      puts "Moving #{post.name} to #{target_name}"
+      # Move it to a node representing the date (eg. 2017/01/11)
+      post.parent = get_date_node(post.data[:date])
 
-      # move it to the new node
-      post.parent = find(target_name)
+      # Remove the date from the file name
       post.name   = post.slug
     end
+  end
 
-    # Build an index of latest posts
+  def build_latest_post_index
     data[:latest_posts] = data[:posts].sort_by {|p| p.data['date'] }.reverse
   end
-end
 
+  def get_date_node(date)
+    yearly  = find(date.year) || create(date.year)
+    monthly = yearly.find(date.month) || yearly.create(date.month)
+    monthly.find(date.day) || monthly.create(date.day)
+  end
+end
 
 parent.extend PostUrlsWithDays
