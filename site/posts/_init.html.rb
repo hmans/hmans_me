@@ -2,10 +2,7 @@ module PostUrlsWithDays
   class YearlyNode < Flutterby::Node
     def emit_child(name)
       if name =~ %r{\A[0-9]+\Z}
-        MonthlyNode.new(name, parent: self).tap do |node|
-          node.data[:year] = data[:year]
-          node.data[:month] = name.to_i
-        end
+        MonthlyNode.new(name, parent: self)
       end
     end
   end
@@ -13,13 +10,7 @@ module PostUrlsWithDays
   class MonthlyNode < Flutterby::Node
     def emit_child(name)
       if name =~ %r{\A[0-9]+\Z}
-        DailyNode.new(name, parent: self).tap do |node|
-          node.data[:year] = data[:year]
-          node.data[:month] = data[:month]
-          node.data[:day] = name.to_i
-
-          node.source = "Hi!"
-        end
+        DailyNode.new(name, parent: self)
       end
     end
   end
@@ -29,9 +20,7 @@ module PostUrlsWithDays
 
   def emit_child(name)
     if name =~ %r{\A[0-9]+\Z}
-      YearlyNode.new(name, parent: self).tap do |node|
-        node.data[:year] = name.to_i
-      end
+      YearlyNode.new(name, parent: self)
     end
   end
 
@@ -58,7 +47,6 @@ module PostUrlsWithDays
     # Build an index of latest posts
     data[:latest_posts] = data[:posts].sort_by {|p| p.data['date'] }.reverse
   end
-
 end
 
 
