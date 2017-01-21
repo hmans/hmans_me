@@ -4,7 +4,7 @@ module SiteHelpers
   end
 
   def blog_posts
-    find('/posts').pages.sort_by {|p| p.data['date'] }.reverse
+    find('/posts').data[:latest_posts]
   end
 
   def page_title
