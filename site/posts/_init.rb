@@ -1,3 +1,13 @@
+module PostExtensions
+  def slug
+    name.sub(%r{^(\d\d\d\d\-\d\d?\-\d\d?)\-}, "")
+  end
+end
+
+extend_siblings PostExtensions
+
+
+
 module PostUrlsWithDays
   def self.extended(base)
     base.move_posts
