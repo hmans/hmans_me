@@ -1,13 +1,16 @@
+# Currently not functional.
+
 module PostArchive
-  def self.extended(base)
-    base.load_years
-    base.create_archive_pages
+  def setup
+    load_years
+    create_archive_pages
   end
 
   def load_years
-    all_posts = find("/posts").pages
+    all_posts = parent.data[:posts]
     post_groups = all_posts.group_by { |p| p.data['date'].year }
     data[:years] = post_groups.keys
+    puts data[:years].inspect
   end
 
   def create_archive_pages
