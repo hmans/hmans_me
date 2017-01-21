@@ -1,19 +1,16 @@
-module PostExtensions
+extend_siblings do
   def slug
     name.sub(%r{^(\d\d\d\d\-\d\d?\-\d\d?)\-}, "")
   end
 end
 
-extend_siblings PostExtensions
-
-
-
-module PostUrlsWithDays
+extend_parent do
+  def setup
+    move_posts
+  end
+  
   def posts
-    @posts || begin
-      @posts = pages
-      move_posts
-    end
+    @posts ||= pages
   end
 
   def latest_posts
@@ -22,7 +19,7 @@ module PostUrlsWithDays
 
   def move_posts
     # Move posts to their correct date URL.
-    @posts.each do |post|
+    posts.each do |post|
       # Move it to a node representing the date (eg. 2017/01/11)
       post.parent = get_date_node(post.data[:date])
 
@@ -39,5 +36,3 @@ module PostUrlsWithDays
     monthly.find(day) || monthly.create(day)
   end
 end
-
-parent.extend PostUrlsWithDays
