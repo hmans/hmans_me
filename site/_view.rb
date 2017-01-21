@@ -4,7 +4,7 @@ module SiteHelpers
   end
 
   def blog_posts
-    find('/posts').posts
+    find('/posts').latest_posts
   end
 
   def page_title
