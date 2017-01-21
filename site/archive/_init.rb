@@ -1,5 +1,3 @@
-# Currently not functional.
-
 module PostArchive
   def setup
     load_years
@@ -7,10 +5,9 @@ module PostArchive
   end
 
   def load_years
-    all_posts = parent.data[:posts]
+    all_posts = find('/posts').posts
     post_groups = all_posts.group_by { |p| p.data['date'].year }
     data[:years] = post_groups.keys
-    puts data[:years].inspect
   end
 
   def create_archive_pages
