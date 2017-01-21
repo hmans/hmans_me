@@ -34,9 +34,11 @@ module PostUrlsWithDays
   end
 
   def get_date_node(date)
-    yearly  = find(date.year) || create(date.year)
-    monthly = yearly.find(date.month) || yearly.create(date.month)
-    monthly.find(date.day) || monthly.create(date.day)
+    year, month, day = date.strftime("%Y/%m/%d").split("/")
+
+    yearly  = find(year) || create(year)
+    monthly = yearly.find(month) || yearly.create(month)
+    monthly.find(day) || monthly.create(day)
   end
 end
 
