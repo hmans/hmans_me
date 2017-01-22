@@ -18,9 +18,6 @@ extend_parent do
     posts.each do |post|
       # Move it to a node representing the date (eg. 2017/01/11)
       post.parent = get_date_node(post.date)
-
-      # Remove the date from the file name
-      post.name   = post.slug
     end
   end
 
