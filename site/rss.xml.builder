@@ -17,7 +17,7 @@ xml.rss version: "2.0", 'xmlns:atom' => 'http://www.w3.org/2005/Atom' do
         xml.link url
         xml.guid url, isPermaLink: true
 
-        xml.description post.body
+        xml.description post.render
       end
     end
   end
