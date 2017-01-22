@@ -13,19 +13,7 @@ extend_siblings do
 end
 
 extend_parent do
-  def setup
-    move_posts
-  end
-
-  def posts
-    @posts ||= pages
-  end
-
-  def latest_posts
-    @latest_posts ||= posts.sort_by(&:date).reverse
-  end
-
-  def move_posts
+  on_setup do
     # Move posts to their correct date URL.
     posts.each do |post|
       # Move it to a node representing the date (eg. 2017/01/11)
@@ -34,6 +22,14 @@ extend_parent do
       # Remove the date from the file name
       post.name   = post.slug
     end
+  end
+
+  def posts
+    @posts ||= pages
+  end
+
+  def latest_posts
+    @latest_posts ||= posts.sort_by(&:date).reverse
   end
 
   def get_date_node(date)
