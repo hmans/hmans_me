@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 95b4e9b56313427ba288cfd78b2f9d82980ac034
+  revision: afaa4be402e07d03b9064fd8d5e1f7e7ebd28924
   branch: master
   specs:
     flutterby (0.5.0)
@@ -64,6 +64,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     nokogumbo (1.4.10)
       nokogiri
+    puma (3.6.2)
     rack (2.0.1)
     rb-fsevent (0.9.8)
     rb-inotify (0.9.7)
@@ -99,6 +100,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-script
   flutterby!
+  puma
 
 RUBY VERSION
    ruby 2.3.3p222
