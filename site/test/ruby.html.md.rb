@@ -1,8 +1,8 @@
 def filter!
-  self.body = <<~EOF
-  # Hi!
+  self.body = <<-EOF
+# Hi!
 
-  I'm Ruby, returning Markdown, which is then
-  rendered to HTML. Crazy!
-  EOF
+I'm Ruby, returning Markdown, which is then
+rendered to HTML. Crazy!
+EOF
 end
