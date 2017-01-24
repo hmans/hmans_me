@@ -1,7 +1,5 @@
-module TestHelpers
+extend_view do
   def poop
     "#{super} + ❤️"
   end
 end
-
-extend TestHelpers

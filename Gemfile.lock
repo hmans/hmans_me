@@ -1,12 +1,13 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: eb30c6e3d75bec72f18ee2ab5ddf20a7fd762b68
+  revision: 6dfda66de829602b65baf40170695f7a173591be
   branch: master
   specs:
     flutterby (0.5.0)
       activesupport (~> 5.0)
       better_errors (~> 2.1)
       builder (~> 3.2)
+      colorize (~> 0.8)
       erubis (~> 2.7)
       erubis-auto (~> 1.0)
       highline (~> 1.7)
@@ -40,6 +41,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
+    colorize (0.8.1)
     concurrent-ruby (1.0.4)
     crass (1.0.2)
     erubis (2.7.0)

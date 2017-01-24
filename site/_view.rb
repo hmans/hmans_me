@@ -1,4 +1,4 @@
-module SiteHelpers
+extend_view do
   def poop
     "💩"
   end
@@ -21,5 +21,3 @@ module SiteHelpers
     @config_node ||= find("/_config")
   end
 end
-
-extend SiteHelpers
