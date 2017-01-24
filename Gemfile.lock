@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: b7e96ef66e99e3390eaec13b4b8960fed3b1e52c
+  revision: eb30c6e3d75bec72f18ee2ab5ddf20a7fd762b68
   branch: master
   specs:
     flutterby (0.5.0)
@@ -93,6 +93,8 @@ GEM
       citrus (~> 3.0, > 3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    uglifier (3.0.4)
+      execjs (>= 0.3.0, < 3)
 
 PLATFORMS
   ruby
@@ -101,6 +103,7 @@ DEPENDENCIES
   coffee-script
   flutterby!
   puma
+  uglifier
 
 RUBY VERSION
    ruby 2.3.3p222
