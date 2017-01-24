@@ -5,6 +5,10 @@ extend_siblings do
   def date
     data.date
   end
+
+  def draft?
+    !!data.draft
+  end
 end
 
 extend_parent do

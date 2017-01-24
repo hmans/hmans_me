@@ -4,7 +4,7 @@ module SiteHelpers
   end
 
   def blog_posts
-    find('/posts').latest_posts.reject {|p| p.data.draft }
+    find('/posts').latest_posts.reject(&:draft?)
   end
 
   def page_title
