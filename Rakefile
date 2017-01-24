@@ -7,5 +7,5 @@ end
 
 desc "Deploy the website"
 task deploy: [:build] do
-  system "scp -r _build/* hmans@sunder:/var/www/hmans.io/"
+  system "rsync -vr --del _build/* sunder:/var/www/hmans.io/"
 end
