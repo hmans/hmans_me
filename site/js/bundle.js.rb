@@ -20,7 +20,7 @@ class JavaScriptBundle
   end
 
   def uglify
-    Uglifier.new.compile(concatenate)
+    Uglifier.compile(concatenate)
   end
 end
 
@@ -29,8 +29,8 @@ end
 
 bundle = JavaScriptBundle.new
 
-bundle << find("./app.js")
-bundle << find("./jquery-oembed.js")
-bundle << find("./turbolinks.js")
+siblings.each do |node|
+  bundle << node
+end
 
 bundle.uglify
