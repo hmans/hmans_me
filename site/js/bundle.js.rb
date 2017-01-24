@@ -16,7 +16,7 @@ class JavaScriptBundle
   end
 
   def concatenate
-    @nodes.compact.map(&:render).join("\n")
+    @nodes.compact.map(&:render).join(";")
   end
 
   def uglify
