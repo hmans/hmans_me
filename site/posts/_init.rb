@@ -1,14 +1,9 @@
 extend_siblings do
-  def slug
-    name.sub(%r{^(\d\d\d\d\-\d\d?\-\d\d?)\-}, "")
-  end
-
+  # Extend all blog posts with a `#date` helper method that provides
+  # easy access to data.date. Yes, I'm lazy.
+  #
   def date
-    data[:date]
-  end
-
-  def title
-    data[:title]
+    data.date
   end
 end
 
@@ -29,6 +24,9 @@ extend_parent do
     @latest_posts ||= posts.sort_by(&:date).reverse
   end
 
+  # Find (or create) a child node structure that represents the given
+  # date (eg. "2017/04/01").
+  #
   def get_date_node(date)
     year, month, day = date.strftime("%Y/%m/%d").split("/")
 

@@ -10,9 +10,9 @@ xml.rss version: "2.0", 'xmlns:atom' => 'http://www.w3.org/2005/Atom' do
 
     for post in blog_posts.first(10)
       xml.item do
-        xml.title post.data["title"]
+        xml.title post.title
         xml.author "hendrik@mans.de (Hendrik Mans)"
-        xml.pubDate post.data["date"].to_time.rfc822
+        xml.pubDate post.date.to_time.rfc822
         url = "http://hmans.io" + post.url
         xml.link url
         xml.guid url, isPermaLink: true
