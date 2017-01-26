@@ -1,5 +1,5 @@
-<% if opts[:page].fs_path %>
-  <% abs_path = Pathname.new(opts[:page].fs_path) %>
+<% if locals[:page].fs_path %>
+  <% abs_path = Pathname.new(locals[:page].fs_path) %>
   <% base_path = Pathname.new(File.expand_path(File.dirname(__FILE__))) %>
   <% rel_path = abs_path.relative_path_from(base_path) %>
 
