@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 350b0ef73ddb858576236518133e812edff20131
+  revision: 25ae696cf6a2fcb350aef9777e74427041ca9043
   branch: master
   specs:
     flutterby (0.6.0)

@@ -6,7 +6,7 @@ $col2: peru;
 $col3: rgb(138, 138, 138);
 $col-link: #666;
 
-$font: 18px/1.5 "Noto Serif","Helvetica Neue",Arial,sans-serif;
+$font: 18px/1.7 "Noto Serif","Helvetica Neue",Arial,sans-serif;
 
 * { box-sizing: inherit; }
 html, body { box-sizing: border-box; }
@@ -20,7 +20,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 700px;
   padding: 2vmax 2vmax 10vmax 2vmax;
 }
 
@@ -58,6 +58,28 @@ a {
 
 li {
   margin: 0.5em 0;
+}
+
+a.footnote {
+  text-decoration: none;
+  background-color: #e2e2e2;
+  color: #555;
+  padding: 0 2px;
+  font-size: 82.5%;
+}
+
+.footnotes {
+  margin-top: 3rem;
+  color: grey;
+  font-size: 82.5%;
+
+  ol { padding-left: 2rem }
+  a.reversefootnote { text-decoration: none }
+}
+
+.intro {
+  background-color: rgb(210, 205, 173);
+  padding: 1rem;
 }
 
 code {

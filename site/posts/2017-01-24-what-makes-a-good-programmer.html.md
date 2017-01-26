@@ -1,0 +1,34 @@
+---
+title: What Makes a Good Programmer?
+draft: true
+---
+
+- other article: https://dimitrov2k.wordpress.com/2017/01/22/what-does-it-take-to-be-a-good-programmer/
+- it's good, I agree with it
+- but I want to take it one step further
+- need to define what a "good" programmer is
+- writes fast performing code?
+- writes maintainable code?
+- ships fast?
+- have seen all of these in people I would not consider _good_ programmers
+- so there must be something else.
+- am I a good programmer? that depends.
+- I believe I work well and provide quality results, and fast
+- but I know shocklingly little about programming
+- could never build my own compiler
+- (but I could probably learn how to do it)
+- I build things that qualify as "good programs"
+- but at the same time ask worryingly dumb questions
+- so here's my take on what makes a good programmer:
+- (and I am perfectly aware that I may be wrong:)
+- don't be afraid to ask questions
+- don't be afraid, full top
+- be humorous, self-deprecating (= humble); none of what we do _really_ is important
+- at the same time, be accountable, reliable
+- accept that you don't know everything
+- realize others also don't know everything
+- keep the big picture in mind: there's not just you, there's also your team, your product manager, your boss, your employer, etc.
+- use the tools (text editors etc.) that you like, but don't obsess over them; your most important tool is your brain
+- most importantly, don't use something only because others use it. A specific text editor will not make you a better programmer
+- use your brain before you use your text editor
+- communicate openly and without fear
