@@ -27,7 +27,6 @@ end
 
 # This is where we get to use the API:
 $output ||= begin
-  puts "OMG BUNDLE"
   bundle = JavaScriptBundle.new
 
   siblings.each do |node|
