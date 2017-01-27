@@ -75,3 +75,5 @@ Voila, now the blog section will keep re-filing posts into the correct folder wh
 You may think that you don't not need this kind of flexibility when simply building a small static site -- and you'd be completely right. These features are primarily in preparation for Flutterby's "Live Mode", which essentially turns your site into a fully-fledged web application once you have the need for it.
 
 Note that this stuff currently lives in an experimental branch and will very likely change another couple of times before landing in master.
+
+For more information on Flutterby, check out its website, [flutterby.run](http://www.flutterby.run/).
