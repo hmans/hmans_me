@@ -27,15 +27,21 @@ end
 extend_parent do
   on :setup do
     posts.each do |post|
-      post.parent = get_date_node(post.date)
+      move_post(post)
     end
   end
 
   on :post_reloaded do |post|
-    # Just reset the previously memoized ivars so they get refreshed the
+    move_post(post)
+
+    # Reset the previously memoized ivars so they get refreshed the
     # next time they're used.
     @posts = nil
     @latest_posts = nil
+  end
+
+  def move_post(post)
+    post.parent = get_date_node(post.date)
   end
 
   def posts
