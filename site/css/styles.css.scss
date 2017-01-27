@@ -14,7 +14,7 @@ html, body { box-sizing: border-box; }
 body {
   font: $font;
   background-color: white;
-  color: #333;
+  color: #444;
 }
 
 .container {
@@ -48,7 +48,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 2em 0 1em 0;
 }
 
+h1 { font-size: 2rem; }
+
 h2 {
+  font-size: 1.5rem;
+  color: $col2;
+}
+
+h3 {
+  font-size: 1.25rem;
   color: $col2;
 }
 
@@ -83,8 +91,8 @@ a.footnote {
 }
 
 code {
-  background-color: #e8e8e8;
-  font: 85% "Office Code Pro",Menlo,Consolas,Monaco,monotype;
+  background-color: #f0f0f0;
+  font: 82.5% "Office Code Pro",Menlo,Consolas,Monaco,monotype;
   padding: 2px 4px;
   border-radius: 2px;
 }
@@ -92,6 +100,7 @@ code {
 /* code blocks */
 pre>code {
   padding: 15px !important;
+  line-height: 1.4;
 }
 
 /* action lists */
@@ -215,4 +224,8 @@ ul.post-list {
       text-decoration: underline;
     }
   }
+}
+
+.post-link {
+  font-weight: bold;
 }
