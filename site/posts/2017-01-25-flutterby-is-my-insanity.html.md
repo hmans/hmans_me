@@ -33,7 +33,7 @@ I gave up on all these new shinies. I gave up on a world that forces me to setup
 
 I wished for a world where the development world had stuck to at least a rough semblance of sanity. A world where people still enjoyed Ruby, this great language, even though it's neither statically typed nor as fast as JavaScript in V8. A world where good and simple solutions are valued higher than great, but complex ones.
 
-A world where you can just put a `styles.css.scss` file into a directory and have it rendered to a `styles.css` in another.
+Also, a world where you can just put a `styles.css.scss` file into a directory and have it rendered to a `styles.css` in another.
 
 If you also crave for this world, do give [Flutterby] a try; I'm convinced you'll enjoy it. I've just pushed version 0.6.0 of the gem and finally put up a website at [flutterby.run](http://www.flutterby.run/) (with [documentation](http://www.flutterby.run/docs/).) Enjoy!
 
