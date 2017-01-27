@@ -1,3 +1,6 @@
+# This is where we extend all of this folder's siblings, which happen to be
+# blog posts. Yay!
+#
 extend_siblings do
   # Extend all blog posts with a `#date` helper method that provides
   # easy access to data.date. Yes, I'm lazy.
@@ -9,19 +12,34 @@ extend_siblings do
   def draft?
     !!data.draft
   end
+
+  # When this node is reloaded (eg. because the originating file was modified),
+  # emit a :post_reloaded event that the blog section can react on.
+  #
+  on :reloaded do
+    emit :post_reloaded, self
+  end
 end
 
+# The parent of this initialization node is the blog section itself, so
+# let's teach it some tricks.
+#
 extend_parent do
-  on_setup do
-    # Move posts to their correct date URL.
+  on :setup do
     posts.each do |post|
-      # Move it to a node representing the date (eg. 2017/01/11)
       post.parent = get_date_node(post.date)
     end
   end
 
+  on :post_reloaded do |post|
+    # Just reset the previously memoized ivars so they get refreshed the
+    # next time they're used.
+    @posts = nil
+    @latest_posts = nil
+  end
+
   def posts
-    @posts ||= pages
+    @posts ||= descendants.select(&:page?)
   end
 
   def latest_posts
