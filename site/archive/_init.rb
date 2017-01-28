@@ -1,19 +1,16 @@
-root.on(:created) do |node|
-  if node.url == "/posts"
-    generate_yearly_archives!
+root.on :created, "/posts" do |node|
+  emit :update_yearly_archives
+end
+
+on :update_yearly_archives do
+  logger.info "Generating yearly archives!"
+
+  @yearly_archives = find("/posts").posts.map { |p| p.data.date.year }.uniq.map do |year|
+    logger.info "Creating yearly archive page for #{year}"
+    find("_page").copy(year.to_s, year: year)
   end
 end
 
 def yearly_archives
   @yearly_archives
-end
-
-def generate_yearly_archives!
-  @yearly_archives = begin
-    logger.info "Generating yearly archives!"
-    find('/posts').posts.map { |p| p.data.date.year }.uniq.map do |year|
-      logger.info "Creating yearly archive page for #{year}"
-      find("_page").copy(year.to_s, year: year)
-    end
-  end
 end

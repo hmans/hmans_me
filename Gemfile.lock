@@ -1,9 +1,9 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 280bed6f9c1ebcec164aca73a8c89b1437850da9
+  revision: da4dd26f5231bcfd3f50bed6ed815a5fabc0eb37
   branch: event-emitting
   specs:
-    flutterby (0.6.0)
+    flutterby (0.6.1)
       activesupport (~> 5.0)
       better_errors (~> 2.1)
       builder (~> 3.2)
