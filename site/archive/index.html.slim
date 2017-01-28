@@ -1,4 +1,4 @@
 h2 Archive links (for testing):
 
-- for page in find("/archive").pages.reject { |p| p.name == "index" } do
-  a href=page.url = page.name
+- for p in parent.yearly_archives do
+  a href=p.url = p.name

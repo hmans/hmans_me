@@ -1,3 +1,5 @@
+h1 = data.year
+
 ul.post-list
   - for post in find("/posts").posts.select { |p| p.data['date'].year == page.data['year'] } do
     li

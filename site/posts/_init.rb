@@ -1,10 +1,36 @@
-# This is where we extend all of this folder's siblings, which happen to be
-# blog posts. Yay!
+# When a post is created, let's extend it with the module above, and sort
+# it into the correct day node.
 #
-extend_siblings do
-  # Extend all blog posts with a `#date` helper method that provides
-  # easy access to data.date. Yes, I'm lazy.
-  #
+on :created do |post|
+  if post.page?
+    post.extend PostExtension
+    move_post(post)
+  end
+end
+
+# When a post is deleted, reset the currently memoized posts data.
+#
+on :deleted do |post|
+  if post.page? && post != self
+    reset_posts
+  end
+end
+
+# When a post is reloaded, move it (if the date has changed) and reset
+# the memoized post data.
+#
+on :reloaded do |post|
+  if post.page? && post != self
+    move_post(post)
+    reset_posts
+  end
+end
+
+
+
+# This is an extension we'll load into newly created posts.
+#
+module PostExtension
   def date
     data.date
   end
@@ -12,28 +38,12 @@ extend_siblings do
   def draft?
     !!data.draft
   end
-
-  # When this node is reloaded (eg. because the originating file was modified),
-  # emit a :post_reloaded event that the blog section can react on.
-  #
-  on :reloaded do
-    emit :post_reloaded, self
-  end
 end
 
-# The parent of this initialization node is the blog section itself, so
-# let's teach it some tricks.
+# A module with extensions for the blog section itself.
 #
-extend_parent do
-  on :setup do
-    posts.each do |post|
-      move_post(post)
-    end
-  end
-
-  on :post_reloaded do |post|
-    move_post(post)
-
+module BlogExtension
+  def reset_posts
     # Reset the previously memoized ivars so they get refreshed the
     # next time they're used.
     @posts = nil
@@ -63,3 +73,5 @@ extend_parent do
     monthly.find(day) || monthly.create(day)
   end
 end
+
+extend BlogExtension
