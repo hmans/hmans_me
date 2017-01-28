@@ -29,7 +29,7 @@ end
 $output ||= begin
   bundle = JavaScriptBundle.new
 
-  siblings.each do |node|
+  find("./_bundle").children.each do |node|
     bundle << node
   end
 
