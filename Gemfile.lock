@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: b9c736924751929216836d664beac4929a775db3
+  revision: d601639406761939a47212b190b302c1cc9549e6
   branch: event-emitting
   specs:
     flutterby (0.6.1)
