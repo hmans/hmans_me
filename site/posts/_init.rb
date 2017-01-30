@@ -1,21 +1,21 @@
 # When a post is created, let's extend it with the module above, and sort
 # it into the correct day node.
 #
-on :created, ->(p) { p.page? } do |post|
+on :created, ->(p) { p.page? } do |evt, post|
   post.extend PostExtension
   move_post(post)
 end
 
 # When a post is deleted, reset the currently memoized posts data.
 #
-on :deleted, ->(p) { p.page? } do |post|
+on :deleted, ->(p) { p.page? } do
   reset_posts
 end
 
 # When a post is reloaded, move it (if the date has changed) and reset
 # the memoized post data.
 #
-on [:reloaded, :updated], ->(p) { p.page? && p != self } do |post|
+on [:reloaded, :updated], ->(p) { p.page? && p != self } do |evt, post|
   move_post(post)
   reset_posts
 end

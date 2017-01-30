@@ -1,4 +1,4 @@
-root.on :created, "/posts" do |node|
+root.on :created, "/posts" do
   emit :update_yearly_archives
 end
 
