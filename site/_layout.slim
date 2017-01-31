@@ -2,7 +2,7 @@ doctype html
 html
   head
     meta charset="utf-8"
-    title == page_title
+    title #{"#{page.title} &middot;".html_safe if page.title.present?} #{config["site_title"]}
     link rel="alternate" type="application/rss+xml" title="The Blog of Hendrik Mans" href="#{config["site_url"]}/rss.xml"
     link rel="pingback" href="https://webmention.io/hmans.io/xmlrpc"
     link rel="webmention" href="https://webmention.io/hmans.io/webmention"

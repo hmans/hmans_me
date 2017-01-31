@@ -1,3 +1,7 @@
+---
+title: Stuff I Use
+---
+
 # Stuff I Use
 
 ## Operating Systems

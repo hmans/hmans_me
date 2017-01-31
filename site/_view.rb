@@ -8,8 +8,8 @@ extend_view do
   end
 
   def page_title
-    page.data["title"] ?
-      "#{page.data["title"]} &middot; #{config["site_title"]}" :
+    page.title ?
+      "#{page.title} &middot; #{config["site_title"]}" :
       config["site_title"]
   end
 
