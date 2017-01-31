@@ -1,0 +1,39 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title == page_title
+    link rel="alternate" type="application/rss+xml" title="The Blog of Hendrik Mans" href="#{config["site_url"]}/rss.xml"
+    link rel="pingback" href="https://webmention.io/hmans.io/xmlrpc"
+    link rel="webmention" href="https://webmention.io/hmans.io/webmention"
+
+    // jquery
+    script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"
+  
+    // highlight.js
+    link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css"
+    script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"
+
+    // jquery-oembed
+    link rel="stylesheet" href="/css/jquery-oembed.css"
+
+    // my own stuff 
+    script src="/js/bundle.js"
+    link rel="stylesheet" href="/css/styles.css"
+
+  body
+    .container
+      nav role="main"
+        strong =' link_to config["site_title"], "/"
+        ' &middot; #{link_to "RSS", "/rss.xml", rel: "alternate"}
+        ' &middot; #{link_to "Twitter", "https://twitter.com/hmans", rel: "me"}
+        ' &middot; #{link_to "GitHub", "https://github.com/hmans", rel: "me"}
+
+      main role="main"
+        = yield 
+
+      footer role="main"
+        = render "/_link_to_source.html", locals: { page: page }
+
+      // google analytics
+      = render("/_google_analytics.html")
