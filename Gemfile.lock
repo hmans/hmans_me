@@ -1,13 +1,14 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 891d5757c8f8a04232253f36ad7985104da4e55a
-  branch: master
+  revision: 67179e4318e8682080e1318dfb82bc1afd04c04f
+  branch: livereload
   specs:
     flutterby (0.7.0)
       activesupport (~> 5.0)
       better_errors (~> 2.1)
       builder (~> 3.2)
       colorize (~> 0.8)
+      em-websocket (~> 0.5.1)
       erubis (~> 2.7)
       erubis-auto (~> 1.0)
       highline (~> 1.7)
@@ -15,6 +16,7 @@ GIT
       listen (~> 3.1)
       mime-types (~> 3.1)
       rack (~> 2.0)
+      rack-livereload (~> 0.3.16)
       sass (~> 3.4)
       slim (~> 3.0)
       slodown (~> 0.4)
@@ -44,13 +46,18 @@ GEM
     colorize (0.8.1)
     concurrent-ruby (1.0.4)
     crass (1.0.2)
+    em-websocket (0.5.1)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
     erubis-auto (1.0.1)
       erubis (>= 2.7.0)
+    eventmachine (1.2.2)
     execjs (2.7.0)
     ffi (1.9.17)
     highline (1.7.8)
-    i18n (0.7.0)
+    http_parser.rb (0.6.0)
+    i18n (0.8.0)
     json (2.0.3)
     kramdown (1.13.2)
     listen (3.1.5)
@@ -68,8 +75,10 @@ GEM
       nokogiri
     puma (3.6.2)
     rack (2.0.1)
+    rack-livereload (0.3.16)
+      rack
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     rinku (2.0.2)
     ruby-oembed (0.10.1)
@@ -90,7 +99,7 @@ GEM
     temple (0.7.7)
     thor (0.19.4)
     thread_safe (0.3.5)
-    tilt (2.0.5)
+    tilt (2.0.6)
     toml-rb (0.3.15)
       citrus (~> 3.0, > 3.0)
     tzinfo (1.2.2)
