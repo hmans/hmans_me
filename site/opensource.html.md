@@ -5,7 +5,7 @@ If you look at my [GitHub Profile](https://github.com/hmans), you will find a re
 
 ### Active Projects
 
-**[Flutterby](https://github.com/hmans/flutterby) is a web development framework** that aims to simplify the development of small to medium-sized web sites and applications. It can be used as a static site generator, but also as a framework for server-served applications, offering a smooth migration path from one to the other.
+**[Flutterby](https://github.com/hmans/flutterby) is a web development framework** that aims to simplify the development of small to medium-sized web sites and applications. It can be used as a static site generator, but also as a framework for dynamic server-side applications, offering a smooth migration path from one to the other.
 
 **[Slodown](https://github.com/hmans/slodown) is a comprehensive user input rendering pipeline** packaged as a RubyGem. It wraps around some powerful rendering and sanitization libraries and adds some sane defaults. I use it in all my projects that render user-provided Markdown or HTML, and so should you. :-)
 
