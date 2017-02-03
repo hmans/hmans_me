@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/hmans/flutterby.git
-  revision: 67179e4318e8682080e1318dfb82bc1afd04c04f
-  branch: livereload
+  revision: 37073ade62abb61eb1537160b983277f2353d2f7
+  branch: master
   specs:
     flutterby (0.7.0)
       activesupport (~> 5.0)
