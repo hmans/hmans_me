@@ -1,0 +1,8 @@
+doctype XML
+urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  - root.all_nodes.each do |node|
+    - if node.should_publish? && node.page?
+      url
+        loc = config['site_url'] + node.url
+        - if node.data.date
+          lastmod = node.data.date.iso8601
