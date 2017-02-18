@@ -93,6 +93,10 @@ a.footnote {
   padding: 1rem;
 }
 
+img, canvas {
+  max-width: 100%;
+}
+
 code {
   background-color: #f0f0f0;
   font: 82.5% "Office Code Pro",Menlo,Consolas,Monaco,monotype;

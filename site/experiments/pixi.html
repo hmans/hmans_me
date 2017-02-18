@@ -1,0 +1,49 @@
+<div id="game">
+</div>
+
+<script src="/js/pixi.min.js"></script>
+
+<script type="text/javascript">
+var app = new PIXI.Application(600, 450, {backgroundColor : 0x000000});
+$("#game").append(app.view);
+
+
+function startGame(loader, resources) {
+  // create container
+  var container = new PIXI.Container();
+  app.stage.addChild(container);
+
+  // fill container with some hmanses ;-)
+  for (var i = 0; i < 25; i++) {
+    var hmans = new PIXI.Sprite(resources.hmans.texture);
+    hmans.anchor.set(0.5);
+    hmans.scale.set(0.2);
+    hmans.x = (i % 5) * 100;
+    hmans.y = Math.floor(i / 5) * 100;
+    container.addChild(hmans);
+
+  }
+
+  container.pivot.set(container.width / 2, container.height / 2);
+  container.x = app.renderer.width / 2;
+  container.y = app.renderer.height / 2;
+  app.ticker.add(function(delta) {
+    container.rotation += 0.01 / delta;
+  });
+
+  // var hmans = new PIXI.Sprite(resources.hmans.texture);
+  // hmans.anchor.set(0.5);
+  // hmans.x = app.renderer.width / 2;
+  // hmans.y = app.renderer.height / 2 ;
+  // hmans.scale.set(0.5)
+  // app.stage.addChild(hmans);
+  //
+  // app.ticker.add(function(delta) {
+  //   hmans.rotation += 0.02 / delta;
+  // });
+}
+
+PIXI.loader.add('hmans', 'hmans.jpg').load(startGame);
+
+
+</script>

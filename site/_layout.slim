@@ -2,6 +2,8 @@ doctype html
 html
   head
     meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+
     title #{"#{page.title} &middot;".html_safe if page.title.present?} #{config["site_title"]}
     link rel="alternate" type="application/rss+xml" title="The Blog of Hendrik Mans" href="#{config["site_url"]}/rss.xml"
     link rel="pingback" href="https://webmention.io/hmans.io/xmlrpc"
