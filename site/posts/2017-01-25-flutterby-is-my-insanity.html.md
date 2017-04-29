@@ -1,5 +1,6 @@
 ---
 title: Flutterby Is My Insanity
+blurb: in which I admit to hovering on the border of going batshit insane, or at least feeling this way after realizing I just don't tick like many other software developers.
 ---
 
 **tl;dr** I've launched a [Flutterby website](http://www.flutterby.run) and released [Flutterby 0.6.0](https://github.com/hmans/flutterby/blob/master/CHANGES.md#060-2017-01-26). Also, I think the world has gone insane, and I'm very bad at writing release announcements.

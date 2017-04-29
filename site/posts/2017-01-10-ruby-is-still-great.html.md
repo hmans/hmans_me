@@ -1,5 +1,6 @@
 +++
 title = "Ruby is still great!"
+blurb = "a love letter of sorts to Ruby, one of my all-time favorite programming languages."
 +++
 
 I realized something today:

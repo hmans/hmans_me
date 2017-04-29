@@ -1,5 +1,6 @@
 ---
 title: SPACERAGE!
+blurb: in which I write about a dumb little HTML5 space game I've built to catch up with the world of HTML5 game development.
 ---
 
 The last couple of weeks I've been working on [SPACERAGE], a dumb little 2D space shooter powered by HTML5. It's not a serious attempt at making a game, but rather an excuse to brush up on frontend development and get up to speed with Canvas/WebGL/web audio. The source is [available on GitHub](https://github.com/hmans/spacerage). Please don't mock me.

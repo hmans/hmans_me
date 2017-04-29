@@ -4,4 +4,7 @@ article.post
 
   h1 = page.title
 
+  - if page.data.blurb.present?
+    .post-blurb ...#{page.data.blurb}
+    
   = yield

@@ -1,5 +1,6 @@
 ul.post-list
   - locals[:posts].each do |post|
-    li
-      .post-meta = date_format post.date, "%B %e, %Y"
-      .post-link = link_to (post.title || "Unnamed Post"), post
+    - if post.data.blurb.present?
+      li
+        span.post-date #{date_format post.date, "%B %e, %Y"}:
+        |  "#{link_to (post.title || "Unnamed Post"), post}", #{post.data.blurb}

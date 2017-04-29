@@ -1,5 +1,6 @@
 ---
 title: Flutterby Event Handling
+blurb: in which I go into way too much detail about some upcoming new stuff in my own little static site generator.
 ---
 
 [Flutterby](http://www.flutterby.run/) has a built-in HTTP server that will serve your website. Just like Flutterby does when you're exporting your site to its static version, the first thing it will do is read your source directory and build an in-process object graph from all the files it encounters. (This graph is the very core of everything that Flutterby does.)

@@ -1,5 +1,6 @@
 ---
 title: Introducing Flutterby!
+blurb: which is just what it says. Flutterby, of course, being my own little foray into the world of static site generators.
 ---
 
 [I tweeted about Flutterby.](https://twitter.com/hmans/status/819227586446376960){:.embed}
