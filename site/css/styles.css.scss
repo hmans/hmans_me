@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Open+Sans:400,700');
 @import "partials/_forms.scss";
 
 $col1: steelblue;
 $col2: peru;
 $col3: rgb(138, 138, 138);
-$col-gray: #999;
+$col-gray: #aaa;
 $font: 16px/1.7 "Merriweather","Georgia","Times New Roman",serif;
-
+$font-heading: 1rem/1.2 "Open Sans",Helvetica,sans-serif;
 
 html, body { box-sizing: border-box }
 *, *:before, *:after { box-sizing: inherit }
@@ -27,13 +27,14 @@ body {
 
 nav[role="main"] {
   color: $col-gray;
-  font-size: 0.825em;
+  font: $font-heading;
 
   a { color: inherit; }
+  a:hover { color: #555; }
 }
 
 main {
-  margin-top: 2em;
+  margin-top: 3em;
 }
 
 footer[role="main"] {
@@ -41,17 +42,20 @@ footer[role="main"] {
   font-size: 0.825em;
   a { color: inherit; }
 
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font: $font-heading;
   font-size: inherit;
+  font-weight: bold;
   margin: 2em 0 1em 0;
 }
 
 h1 {
   margin-top: 0em;
   font-size: 2rem;
+  color: $col2;
 }
 
 h2 {
@@ -212,7 +216,8 @@ article.post {
 
   .post-blurb {
     color: $col-gray;
-    margin: 1rem 0 2rem 0;
+    font-size: 120%;
+    margin: 1em 0 2em 0;
   }
 }
 
@@ -237,8 +242,9 @@ ul.post-list {
 }
 
 .post-meta {
-  color: #bbb;
+  color: $col-gray;
   font-size: 0.825em;
+  margin: 0.5rem 0;
 
   a {
     color: inherit;
