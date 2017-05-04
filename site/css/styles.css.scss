@@ -94,6 +94,14 @@ blockquote {
   padding: 1.5rem;
 }
 
+hr {
+  height: 0px;
+  border: none;
+  border-top: 1px dashed #ccc;
+  background-color: inherit;
+  margin: 2em 0;
+}
+
 a.footnote {
   text-decoration: none;
   background-color: #e2e2e2;

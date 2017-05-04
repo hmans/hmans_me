@@ -172,6 +172,10 @@ While still not the biggest fan of UI libraries like React, **I understand why t
 
 And I _totally_ want to build something with Firebase. It's so good.
 
+----
+
+**Update:** there has been some good follow-up discussion [over at Reddit](https://www.reddit.com/r/javascript/comments/697m97/adventures_of_an_ancient_web_developer_in/). Thanks for the many insightful comments! Also, feel free to shout at me on Twitter, where I'm [@hmans](https://twitter.com/hmans).
+
 
 
 
