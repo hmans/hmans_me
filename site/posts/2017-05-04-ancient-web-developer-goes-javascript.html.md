@@ -5,7 +5,7 @@ blurb: in which I finally bite the bullet and catch up on all the crazy things t
 
 My friends, terrible things are afoot: **I have been diving, no, delving into the wondrous world of JavaScript**. Yes, JavaScript, the language and ecosystem I have been tirelessly mocking for the last decade or two! Shocking, I know.
 
-See, a while back [this blog post][ancient] was making the rounds. It threw the term "Ancient Web Developer" at me. **Imagine my rage!** I was not happy. After flipping some tables and probably insulting some random people on Twitter (I don't remember, but it happens), I returned to my computer and had an epiphany:
+See, a while back [this blog post][ancient] was making the rounds. It threw the term "Ancient Web Developer" at me. **Imagine my rage!** I was not happy. After flipping some tables and probably insulting some random people on Twitter (I don't remember, but it happens), I returned to my computer, read the rest of the article, and had an epiphany:
 
 **The author was right.**
 
@@ -68,7 +68,7 @@ So, yes, the Virtual DOM enables you to reason about your UI in a way that certa
 
 > A similar technique has existed in game development long before React: re-render the game screen in every game loop, but only update the minimum portion of the screen which changed compared to the previously rendered screen.
 
-I'm sorry to say that this is an utter misunderstanding of how games actually work, and a very short-sighted comparison. Games do redraw their scenes from scratch on every frame, but they do this **with the help of hardware that is built for nothing but this very purpose**. The Virtual DOM approach actively **fights its host platform**. Games also perform absolutely _no_ diffing against a previous state; I'm guessing the author is thinking of techniques like _culling_ (the process of figuring out the parts of your scene that don't need to be drawn at all.)
+I'm sorry to say that this is an utter misunderstanding of how games actually work, and a very short-sighted comparison. Games do redraw their scenes from scratch on every frame, but they do this **with the help of hardware that is built for nothing but this very purpose**. The Virtual DOM approach, on the other hand, actively **fights its host platform**. Games also perform absolutely _no_ diffing against a previous state; I'm guessing the author is thinking of techniques like _culling_ (the process of figuring out the parts of your scene that don't need to be drawn at all.)
 
 If you believe Virtual DOMs are great at rendering stuff at 60 FPS because that's how games do it, too, you're going to put yourself in a world of hurt.
 
