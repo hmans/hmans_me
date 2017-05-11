@@ -23,7 +23,7 @@ There are probably more examples out there.
 
 As a developer, at some point you will need to drop your addiction to new and shiny, and just use mature tools that work, even if they bore you. Maybe you can find some excitement in simply being done faster than everybody else.
 
-[Downvote me on Twitter](https://twitter.com/hmans/status/862674285441286144).
+**[Downvote me on Twitter](https://twitter.com/hmans/status/862674285441286144).**
 
 
 [TypeScript]: https://www.typescriptlang.org/
