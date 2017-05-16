@@ -26,6 +26,13 @@ html
     // google verification
     meta name="google-site-verification" content="vpb8fSaoAQ7FsmI4vGY1zd7kE9inb-OSg8YYYsnweGQ"
 
+    // twitter card
+    meta name="twitter:card" content="summary"
+    meta name="twitter:site" content="@hmans"
+    meta name="twitter:title" content=(page.title.presence || "Hendrik Mans")
+    meta name="twitter:description" content=(page.data.blurb.presence || "The blog of Hendrik Mans.")
+    meta name="twitter:image" content="https://de.gravatar.com/userimage/2123/f32755338cf0e670020cd6ae34693c0c.jpg?size=300"
+
   body
     .container
       nav role="main"
