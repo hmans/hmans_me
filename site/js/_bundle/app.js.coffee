@@ -5,5 +5,5 @@ initPage = ->
   $('pre code').each (i, block) ->
     hljs.highlightBlock(block)
 
-$(document).on "turbolinks:load", ->
+$(document).on "ready", ->
   initPage()

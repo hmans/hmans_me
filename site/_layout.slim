@@ -35,15 +35,20 @@ html
     meta name="twitter:title" content=(page.title.presence || "Hendrik Mans")
     meta name="twitter:description" content=(page.data.blurb.presence || "The blog of Hendrik Mans.")
     meta name="twitter:image" content="https://de.gravatar.com/userimage/2123/f32755338cf0e670020cd6ae34693c0c.jpg?size=300"
-
+    
   body
     .container
       main role="main"
         = render '/_intro'
         = yield 
+        
+        .obnoxious-social-buttons
+          a.twitter-follow-button href="https://twitter.com/hmans" data-size="large" Follow @hmans on Twitter
+
 
       footer role="main"
         = render "/_link_to_source.html", locals: { page: page }
 
       // google analytics
       = render("/_google_analytics.html")
+      = render "/_twitter.html"
