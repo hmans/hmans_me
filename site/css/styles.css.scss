@@ -52,9 +52,15 @@ div.intro-text {
     text-decoration: none;
   }
 
+  a.fa {
+    color: #ccc;
+    margin-left: 5px;
+  }
+
   a:hover {
     color: $col1;
   }
+
 }
 
 main {
