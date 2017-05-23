@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Khula:400,700');
 @import "partials/_forms.scss";
 
 $col1: steelblue;
 $col2: peru;
 $col3: rgb(138, 138, 138);
 $col-gray: #aaa;
-$font: 16px/1.7 "Merriweather","Georgia","Times New Roman",serif;
-$font-heading: 1rem/1.2 "Open Sans",Helvetica,sans-serif;
+$font: 17px/1.6 "Khula";
+$font-heading: 1rem/1.2 "Khula",Helvetica,sans-serif;
 
 %collapse {
   >*:first-child { margin-top: 0 }
@@ -38,8 +38,8 @@ header#intro {
 }
 
 img.intro-avatar {
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   margin-right: 2em;
 }
