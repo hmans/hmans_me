@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Khula:400,700');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
 @import "partials/_forms.scss";
 
 $col1: steelblue;
 $col2: peru;
 $col3: rgb(138, 138, 138);
 $col-gray: #aaa;
-$font: 17px/1.6 "Khula";
-$font-heading: 1rem/1.2 "Khula",Helvetica,sans-serif;
+$font: 17px/1.5 "Work Sans";
+$font-heading: 1rem/1.2 "Work Sans",Helvetica,sans-serif;
 
 %collapse {
   >*:first-child { margin-top: 0 }
