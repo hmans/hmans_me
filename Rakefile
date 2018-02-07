@@ -7,5 +7,5 @@ end
 
 desc "Deploy the website"
 task deploy: [:build] do
-  system "rsync -vr --del _build/* sunder:/var/www/hmans.io/"
+  system "netlify deploy -p _build/"
 end
